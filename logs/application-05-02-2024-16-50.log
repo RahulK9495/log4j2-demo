@@ -1,0 +1,5 @@
+2024-05-02 16:50:16 [main]  DEBUG TestLogger:11 - >>> Debug message 
+2024-05-02 16:50:16 [main]  INFO  TestLogger:12 - >>> info message 
+2024-05-02 16:50:16 [main]  WARN  TestLogger:13 - >>> warn message 
+2024-05-02 16:50:16 [main]  ERROR TestLogger:14 - >>> error message 
+2024-05-02 16:50:16 [main]  FATAL TestLogger:15 - >>> fatal message 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="warn">
+    <Appenders>
+    	<!-- Console appender configuration -->
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout   pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] [%F]  %-5p %C{1}:%L - %m%n" />
+        </Console>
+ <!-- 		<File name="File" filename="logs/application.log">
+            <PatternLayout   pattern="%d [%t] [%F]  %-5p %C{1}:%L - %m%n" /> 		
+ 		</File>
+  -->		
+ 		<RollingFile name="RollingFile" fileName="logs/application.log"
+ 		  filePattern="logs/application-%d{MM-dd-yyyy-HH-mm}.log">
+            <PatternLayout   pattern="%d{yyyy-MM-dd HH:mm:ss} [%t]  %-5p %logger{36) %C{1}:%L - %m%n" />
+ 		  <Policies>
+ 		  		<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+ 		  </Policies>
+ 		  
+ 		  </RollingFile>
+    </Appenders>
+    <Loggers>
+    	<!-- Root logger referring to console appender -->
+        <Root level="debug" >
+            <AppenderRef ref="console" />
+            <AppenderRef ref="RollingFile"/>
+        </Root>
+    </Loggers>
+</Configuration>
